@@ -3,7 +3,7 @@
 echo "start ssh"
 /root/docker-ssh.sh &
 
-# bitcoind rpcauth
+# garlicoind rpcauth
 python3 /root/rpcauth.py garlicoinrpc > rpc.txt
 cat rpc.txt | grep rpcauth >> /root/garlicoin.conf 
 

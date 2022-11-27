@@ -14,7 +14,7 @@ RUN mkdir -p /var/run/sshd
 USER root
 WORKDIR /root
 
-# bitcoind
+# garlicoind
 RUN wget https://github.com/GarlicoinOrg/Garlicoin/releases/download/v0.18.0/garlicoin-0.18.0-x86_64-linux-gnu.tar.gz && \ 
     tar -xzf garlicoin-0.18.0-x86_64-linux-gnu.tar.gz && \
     ln -s garlicoin-0.18.0 garlicoin && \

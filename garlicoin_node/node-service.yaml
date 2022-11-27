@@ -63,7 +63,7 @@ Resources:
           !Join ['-', [!Ref 'StackName', 'ECSTaskExecutionRole']]
       TaskRoleArn:
         Fn::ImportValue:
-          !Join ['-', [!Ref 'StackName', 'BitcoinExecutionRole-ARN']]
+          !Join ['-', [!Ref 'StackName', 'GarlicoinExecutionRole-ARN']]
       Volumes:
         - Name: efsdata
           EFSVolumeConfiguration:

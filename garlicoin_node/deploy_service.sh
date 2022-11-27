@@ -24,4 +24,4 @@ SSH_PUBLIC_KEY="`cat ~/.ssh/id_rsa.pub`"
 SERVER_CRT="`cat server.crt`"
 SERVER_KEY="`cat server.key`"
 
-aws cloudformation deploy --template-file $1 --stack-name bitcoin-service --parameter-overrides ImageUrl=$fullname SSHPublicKey="$SSH_PUBLIC_KEY" ServerCrt="$SERVER_CRT" ServerKey="$SERVER_KEY"
+aws cloudformation deploy --template-file $1 --stack-name garlicoin-service --parameter-overrides ImageUrl=$fullname SSHPublicKey="$SSH_PUBLIC_KEY" ServerCrt="$SERVER_CRT" ServerKey="$SERVER_KEY"
