@@ -1,6 +1,6 @@
 ## Garlicoin Core & ElectrumX (Garlium Server)
 
-This repo contains the files for a Garlicoin Full Node and ElectrumX Server running on AWS ECS  
+This repo contains the files for a serverless Garlicoin Full Node and ElectrumX Server running on AWS ECS  
 
 ### Setup of Garlicoin Full Node and Electrum Server
 
