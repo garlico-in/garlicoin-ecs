@@ -80,8 +80,10 @@ Resources:
           Memory: !Ref 'ContainerMemory'
           Image: !Ref 'ImageUrl'
           PortMappings:
-            - ContainerPort: !Ref 'ContainerPort'
+            - ContainerPort: !Ref 'ServerPort'
             - ContainerPort: 50002
+            - ContainerPort: !Ref 'NodePort'
+            - ContainerPort: 42069
           MountPoints:
             - ContainerPath: /root/garlicoin_data
               SourceVolume: efsdata

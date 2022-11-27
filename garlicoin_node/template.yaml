@@ -279,7 +279,7 @@ Resources:
       Protocol: TCP
       HealthCheckEnabled: true
       HealthCheckIntervalSeconds: 10
-      HealthCheckPort: 22
+      HealthCheckPort: 50002
       HealthCheckProtocol: TCP
       HealthCheckTimeoutSeconds: 10
       HealthyThresholdCount: 3
@@ -333,7 +333,7 @@ Resources:
       Protocol: TCP
       HealthCheckEnabled: true
       HealthCheckIntervalSeconds: 10
-      HealthCheckPort: 22
+      HealthCheckPort: 42069
       HealthCheckProtocol: TCP
       HealthCheckTimeoutSeconds: 10
       HealthyThresholdCount: 3
