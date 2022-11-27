@@ -23,10 +23,14 @@ Parameters:
   ServerKey:
     Type: String
     Description: ServerKey
-  ContainerPort:
+  ServerrPort:
     Type: Number
     Default: 50002
-    Description: What port number the application inside the docker container is binding to
+    Description: What port number the ElectrumX server inside the docker container is binding to
+  NodePort:
+    Type: Number
+    Default: 42069
+    Description: What port number the Garlicoin node inside the docker container is binding to
   ContainerCpu:
     Type: Number
     Default: 2048
@@ -76,8 +80,10 @@ Resources:
           Memory: !Ref 'ContainerMemory'
           Image: !Ref 'ImageUrl'
           PortMappings:
-            - ContainerPort: !Ref 'ContainerPort'
-            - ContainerPort: 50002
+            - ServerPort: !Ref 'ServerPort'
+            - ServerPort: 50002
+            - NodePort: !Ref 'NodePort'
+            - NodePort: 42069
           MountPoints:
             - ContainerPath: /root/garlicoin_data
               SourceVolume: efsdata

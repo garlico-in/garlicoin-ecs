@@ -33,6 +33,7 @@ COPY start.sh /root/
 RUN chmod +x /root/start.sh
 
 EXPOSE 50002
+EXPOSE 42069
 EXPOSE 22
 
 # start

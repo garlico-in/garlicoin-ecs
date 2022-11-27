@@ -23,9 +23,13 @@ Parameters:
   ServerKey:
     Type: String
     Description: ServerKey
-  ContainerPort:
+  ServerPort:
     Type: Number
     Default: 50002
+    Description: What port number the application inside the docker container is binding to
+  NodePort:
+    Type: Number
+    Default: 42069
     Description: What port number the application inside the docker container is binding to
   ContainerCpu:
     Type: Number
