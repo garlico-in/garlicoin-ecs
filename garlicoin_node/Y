@@ -2,9 +2,9 @@ version = 0.1
 [default]
 [default.deploy]
 [default.deploy.parameters]
-stack_name = "bitcoin-app"
+stack_name = "garlicoin-app"
 s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-r48lkui5ga5b"
-s3_prefix = "bitcoin-app"
+s3_prefix = "garlicoin-app"
 region = "ca-central-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"

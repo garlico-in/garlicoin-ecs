@@ -15,15 +15,15 @@ USER root
 WORKDIR /root
 
 # bitcoind
-RUN wget https://bitcoincore.org/bin/bitcoin-core-0.21.1/bitcoin-0.21.1-x86_64-linux-gnu.tar.gz && \ 
-    tar -xzf bitcoin-0.21.1-x86_64-linux-gnu.tar.gz && \
-    ln -s bitcoin-0.21.1 bitcoin && \
-    rm bitcoin-0.21.1-x86_64-linux-gnu.tar.gz
-COPY bitcoin.conf /root/
-RUN wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/share/rpcauth/rpcauth.py
+RUN wget https://github.com/GarlicoinOrg/Garlicoin/releases/download/v0.18.0/garlicoin-0.18.0-x86_64-linux-gnu.tar.gz && \ 
+    tar -xzf garlicoin-0.18.0-x86_64-linux-gnu.tar.gz && \
+    ln -s garlicoin-0.18.0 garlicoin && \
+    rm garlicoin-0.18.0-x86_64-linux-gnu.tar.gz
+COPY garlicoin.conf /root/
+RUN wget https://raw.githubusercontent.com/GarlicoinOrg/Garlicoin/master/share/rpcauth/rpcauth.py
 
 # electrumx
-RUN git clone https://github.com/spesmilo/electrumx.git
+RUN git clone https://github.com/garlicoin-project/garlium.git
 RUN cd electrumx && pip3 install .
 
 COPY docker-ssh.sh /root/
