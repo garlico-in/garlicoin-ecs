@@ -20,7 +20,7 @@ RUN wget https://github.com/GarlicoinOrg/Garlicoin/releases/download/v0.18.0/gar
     ln -s garlicoin-0.18.0 garlicoin && \
     rm garlicoin-0.18.0-x86_64-linux-gnu.tar.gz
 COPY garlicoin.conf /root/
-RUN wget https://raw.githubusercontent.com/GarlicoinOrg/Garlicoin/master/share/rpcauth/rpcauth.py
+RUN wget https://raw.githubusercontent.com/bitcoin/bitcoin/master/share/rpcauth/rpcauth.py
 
 # electrumx
 RUN git clone https://github.com/garlicoin-project/electrumx.git
