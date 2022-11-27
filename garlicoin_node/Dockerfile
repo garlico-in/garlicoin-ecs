@@ -23,7 +23,7 @@ COPY garlicoin.conf /root/
 RUN wget https://raw.githubusercontent.com/GarlicoinOrg/Garlicoin/master/share/rpcauth/rpcauth.py
 
 # electrumx
-RUN git clone https://github.com/garlicoin-project/garlium.git
+RUN git clone https://github.com/garlicoin-project/electrumx.git
 RUN cd electrumx && pip3 install .
 
 COPY docker-ssh.sh /root/
